@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "scripts": {
+    "test": "node tests/reviews.test.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.158.0"
+  }
+}

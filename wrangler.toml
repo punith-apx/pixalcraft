@@ -1,0 +1,8 @@
+name = "pixalcraft"
+pages_build_output_dir = "."
+compatibility_date = "2026-11-07"
+
+[[d1_databases]]
+binding = "REVIEWS_DB"
+database_name = "pixalcraft-reviews"
+database_id = "cff42db7-dcfa-4dbe-b64d-586d80407c1f"

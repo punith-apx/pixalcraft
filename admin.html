@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171715">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Review moderation — PIXALCRAFT</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-page">
+  <header class="admin-top"><a class="brand" href="/" aria-label="Pixalcraft home"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 41V7h16.4c10.8 0 17.6 5.8 17.6 15.3 0 8.6-6.2 14.1-16.3 14.1h-6.2V41H7Zm11.5-14.7h5.6c4.6 0 7.1-2.1 7.1-6 0-4.2-2.7-6.4-7.5-6.4h-5.2v12.4Z"/><path d="M13.3 41V12.8h10.5c7.2 0 11.4 3.5 11.4 9.4 0 5.4-3.8 8.7-10.3 8.7h-6.2" fill="none" stroke="#171715" stroke-width="2.6"/></svg><span class="brand-name">PIXALCRAFT</span></a><a href="/#reviews">← Public reviews</a></header>
+  <main class="admin-shell">
+    <p class="eyebrow"><span class="eyebrow-line"></span> Private moderation</p>
+    <h1>Review <em>approval.</em></h1>
+    <p class="admin-lede">Approve reviews to publish them, or reject reviews you don’t want displayed. Your admin token stays in this page’s memory. Use this moderation page over HTTPS.</p>
+    <noscript><p class="admin-status">JavaScript is required for review moderation. The token will not be placed in the page URL.</p></noscript><form id="admin-login" class="admin-login" method="post" action="/api/admin/reviews"><label>Admin access token<input type="password" name="token" required autocomplete="current-password" placeholder="Enter the configured admin token"></label><button class="button" type="submit">Load pending reviews <span>↗</span></button><button class="admin-logout" id="admin-logout" type="button" hidden>Clear token</button></form>
+    <p class="admin-status" id="admin-status" aria-live="polite">Moderation requires the REVIEWS_ADMIN_TOKEN secret configured in Cloudflare Pages.</p>
+    <div class="admin-list" id="admin-list" aria-live="polite"></div>
+  </main>
+  <script src="admin.js" defer></script>
+</body>
+</html>
